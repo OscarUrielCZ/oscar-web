@@ -1,0 +1,48 @@
+/* General styles */
+
+body {
+  background: url('../img/patron.jpg');
+  background-attachment: fixed;
+}
+
+/* Navbar */
+
+.nav-item {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.logo {
+  font-family: 'Chilanka';
+  font-size: 25px;
+  float: right;
+  line-height: normal;
+  transition: color 500ms, transform 500ms;
+  margin-right: 5%;
+}
+
+.logo:hover {
+  color: white;
+  transform: scale(1.50, 1.50);
+}
+
+.active {
+  color: white;
+}
+
+/* container */
+
+.container {
+  padding-top: 90px;
+  padding-bottom: 20px;
+  background: white;
+}
+
+/* Footer */
+
+footer div {
+  width: 83%;
+  margin: 0px auto;
+  padding-top: 20px;
+  color: rgba(0, 0, 0, 0.9);
+}

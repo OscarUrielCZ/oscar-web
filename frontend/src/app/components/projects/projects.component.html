@@ -1,0 +1,20 @@
+<div>
+  <div class="heading">
+      <h2>{{ title }}</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-lg-4 project" *ngFor="let p of projects">
+      <a [routerLink]="['/proyecto/' + p._id]">
+        <div class="card" style="width: 18rem; margin: 0px auto">
+          <div class="recorted-image">
+            <img *ngIf="p.image" src="{{ url + 'get-image/' + p.image }}" class="card-img-top" alt="Imágen del projecto">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ p.name }}</h5>
+            <p class="card-text">{{ resume(p.description) }}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

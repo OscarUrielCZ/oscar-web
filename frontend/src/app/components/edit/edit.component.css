@@ -1,0 +1,14 @@
+img {
+  display: inline-block;
+  height: 100px;
+  float: left;
+}
+
+input[type="button"] {
+  margin-left: 20px;
+}
+
+.clearfix {
+  float: none;
+  clear: both;
+}

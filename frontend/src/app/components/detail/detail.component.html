@@ -1,0 +1,13 @@
+<div *ngIf="project" class="image_container">
+  <img src="{{ url + 'get-image/' + project.image }}" class="img-fluid mx-auto d-block" alt="Imágen de {{ project.name }}">
+</div>
+<div *ngIf="project" class="text-justify info_conatainer">
+  <h1 class="display-4">{{ project.name }}</h1>
+  <div class="actions">
+    <span class="text-danger" (click)="deleteProject(project._id)">Eliminar</span>
+    <span class="text-warning" [routerLink]="['/editar-proyecto', project._id]">Editar</span>
+  </div>
+  <p>{{ project.technologies }} ({{ project.year }})</p>
+  <p>{{ project.description }}</p>
+  <a [routerLink]="['/proyectos']"><button type="button" class="btn btn-primary">Regresar</button></a>
+</div>

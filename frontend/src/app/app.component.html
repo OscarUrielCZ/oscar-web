@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navOptions" aria-controls="navOptions" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse collapse" id="navOptions" style>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['active']" class="nav-link">Sobre mi</a></li>
+      <li class="nav-item"><a [routerLink]="['/proyectos']" [routerLinkActive]="['active']" class="nav-link">Proyectos</a></li>
+      <li class="nav-item"><a [routerLink]="['/crear-proyecto']" [routerLinkActive]="['active']" class="nav-link">Nuevo proyecto</a></li>
+    </ul>
+  </div>
+  <a [routerLink]="['/']" [routerLinkActive]="['active']" class="nav-link logo">OW</a>
+</nav>
+
+<section class="container">
+    <router-outlet></router-outlet>
+</section>
+
+<footer>
+  <div class="align-content-center">
+    La página corresponde al sitio www.oscarweb.com &copy;
+  </div>
+</footer>

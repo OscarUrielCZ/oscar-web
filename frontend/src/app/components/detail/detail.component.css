@@ -1,0 +1,30 @@
+.image_container {
+  width: 100%;
+  background: rgba(230, 230, 230, 0.4);
+}
+
+img {
+  height: 400px;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+.info_conatainer {
+  width: 70%;
+  margin-left: 20px;
+}
+
+.actions {
+  margin-bottom: 15px;
+}
+
+.text-danger, .text-warning {
+  margin-right: 40px;
+}
+
+.text-danger:hover, .text-warning:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}

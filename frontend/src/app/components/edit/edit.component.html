@@ -1,0 +1,32 @@
+<h2>Editar proyecto</h2>
+
+<span class="text-danger" *ngIf="status == 0">No se ha podido actualizar el projecto</span>
+<img class="img-fluid" *ngIf="project" src="{{ url + 'get-image/' + project.image }}" alt="Imágen del proyecto {{ project.name }}">
+<form *ngIf="project" #createProjectForm="ngForm" (ngSubmit)="onSubmit(createProjectForm)">
+  <div class="form-group" style="display: inline-block; margin-left: 15px;">
+    <label for="image">Cambar imagen</label>
+    <input class="form-control-file" type="file" name="image" placeholder="subir imagen" (change)="fileChangeEvent($event)">
+  </div>
+  <div class="claerfix"></div>
+  <div class="form-group" style="margin-top: 35px;">
+    <label for="name">Nombre</label>
+    <input class="form-control" type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required>
+    <span *ngIf="name.touched && !name.valid">Campo requerido</span>
+  </div>
+  <div class="form-group">
+    <label for="description">Descripción</label>
+    <textarea class="form-control" name="description" #description="ngModel" [(ngModel)]="project.description" required></textarea>
+    <span *ngIf="description.touched && !description.valid">Campo requerido</span>
+  </div>
+  <div class="form-group">
+    <label for="year">Fecha de creación</label>
+    <input class="form-control" type="text" name="year" #year="ngModel" [(ngModel)]="project.year">
+  </div>
+  <div class="form-group">
+    <label for="technologies">Tecnologías</label>
+    <input class="form-control" type="text" name="technologies" #technologies="ngModel" [(ngModel)]="project.technologies" required>
+    <span *ngIf="technologies.touched && !technologies.valid">Campo requerido</span>
+  </div>
+  <input class="btn btn-dark" type="submit" value="Actualizar" [disabled]="!createProjectForm.form.valid">
+  <input class="btn btn-secondary" type="button" value="Cancelar" (click)="cancel()">
+</form>
