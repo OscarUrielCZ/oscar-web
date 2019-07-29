@@ -9,7 +9,6 @@ import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { CreateComponent } from './components/create/create.component';
 import { ErrorComponent } from './components/error/error.component';
-import { HomeComponent } from './components/home/home.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { EditComponent } from './components/edit/edit.component';
 
@@ -20,7 +19,6 @@ import { EditComponent } from './components/edit/edit.component';
     ProjectsComponent,
     CreateComponent,
     ErrorComponent,
-    HomeComponent,
     DetailComponent,
     EditComponent
   ],
